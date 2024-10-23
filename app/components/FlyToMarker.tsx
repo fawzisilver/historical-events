@@ -1,7 +1,7 @@
 import { useMap } from "react-leaflet";
 import { useEffect } from "react";
 
-const FlyToMarker = ({ position, zoomlvl } : any) => {
+const FlyToMarker = ({ position, zoomlvl } : any ) => {
     const map = useMap();
 
 

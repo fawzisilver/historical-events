@@ -1,3 +1,4 @@
+@use './styles/filter';
 @use "./styles/popup";
 
 @tailwind base;
@@ -84,10 +85,5 @@ body {
 }
 
 
-.nav {
-  border: 2px solid var(--border-color-2);;
-  border-radius: var(--brad-1);
-  background-color: var(--events--bg);
-  color: var(--color-white)
-}
+
 

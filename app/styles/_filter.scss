@@ -1,0 +1,42 @@
+.filter {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--brad-2);
+
+    &__select {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 20em;
+        overflow: hidden;
+        font-weight: 600;
+        border: 2px solid var(--border-color-2);
+        border-radius: var(--brad-1);
+        cursor: pointer;
+
+        select {
+            padding: 0 2rem;
+            outline: none;
+            appearance: none;
+            background-color: var(--body-bg);
+            border: none;
+            width: 100%;
+            color: var(--color-beige);
+            cursor: pointer;
+        }
+
+        /* Add custom arrow or styling at the end of the select */
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3em;
+            height: 100%;
+            pointer-events: none; /* This ensures the arrow doesn't block the select */
+            background-color: var(--color-beige);
+        }
+    }
+}

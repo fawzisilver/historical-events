@@ -6,6 +6,7 @@ import { historyEvents, HistoricalEvents } from "../historyEvents"
 import { useState, useRef, act } from "react"
 import { Map as Leaflet} from "leaflet"
 import FlyToMarker from "./FlyToMarker"
+import Filter from "./Filter"
 
 const defaultPosition : [number, number] = [51.505, -0.09];
 
@@ -14,15 +15,16 @@ const fullHeart = <i className="fa-solid fa-heart" style={{ color: "rgb(156, 54,
 // mapsapp
 const MapApplication = () => {
   const [hoveredEvent, setHoveredEvent] = useState<number | null>(null);
-  const [activeEvent, setActiveEvent] = useState<HistoricalEvents | null>(null)
+  const [activeEvent, setActiveEvent] = useState<HistoricalEvents | null>(null);
   const [favorites, setFavorites] = useState<number[]>(() => {
-    // initial data
-    const savedFavorites = localStorage.getItem("favorites");
+// initial data
+      const savedFavorites = localStorage.getItem("favorites");
       return savedFavorites ? JSON.parse(savedFavorites) : []; //parse mean string to json otherwise empty array
   });
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
+  console.log('selected category :)', selectedCategory)
   console.log(favorites)
-
 
 
   const defaultIcon: Icon = new Icon({
@@ -47,6 +49,7 @@ const MapApplication = () => {
 
   }
 
+
   const handleListItemClick = (eventId : number) => {
     const event = historyEvents.find((history) => history.id === eventId);
 
@@ -61,8 +64,8 @@ const MapApplication = () => {
   return (
     <div className="flex flex-col gap-5 w-full h-full">
   {/* Navigation Bar */}
-    <div className="nav h-[8%] flex items-center justify-center ">
-      <h1>Navigation Bar</h1>
+    <div className="nav h-[8%] flex items-center justify-start  ">
+      <Filter setSelectedCategory={setSelectedCategory} />
     </div>
 
   {/* Main Content with Sidebar on Left and Map on Right */}
@@ -99,11 +102,11 @@ const MapApplication = () => {
     ) : null }
     
 
-    {/* Main Content - Map on the Right */}
+    {/* Main Content */}
     <div className={`${favorites.length > 0 ? 'w-4/5' : 'w-full'} h-full pl-4`}>
       <MapContainer center={defaultPosition} zoom={13} className="map-container">
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        {historyEvents.map((event) => (
+        {historyEvents.filter((event) => !selectedCategory || event.category === selectedCategory).map((event) => (
           <Marker
             key={event.id}
             position={event.position}
@@ -117,13 +120,13 @@ const MapApplication = () => {
           />
 
         ))}
-
+       {/* if active favorite, flys to the marker */}
       {activeEvent && <FlyToMarker position={activeEvent?.position} zoomlvl={12} />}  
 
-        {/* Active or Clicked Marker */}
+        {/* if active marker on map */}
         {activeEvent && activeEvent.position && Array.isArray(activeEvent.position) && (
           
-          <Popup position={activeEvent.position} offset={[0, -1]} className="popup-style">
+          <Popup position={activeEvent.position} offset={[0, -1]}>
             <div className="popup-inner">
               <h2 className="popup-inner__title">{activeEvent.title}</h2>
               <hr style={{ borderColor: "rgb(111, 207, 151)", borderWidth: '1px', width: '40%' }} />
