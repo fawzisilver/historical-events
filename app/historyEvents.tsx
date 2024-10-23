@@ -1,5 +1,5 @@
 
-type HistoricalEvents = {
+export type HistoricalEvents = {
     id: number;
     title: string;
     description: string;

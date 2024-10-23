@@ -2,16 +2,24 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 import 'leaflet/dist/leaflet.css'
 import { Icon } from 'leaflet'
-import { events } from "../historyEvents"
-import { useState } from "react"
+import { events, HistoricalEvents } from "../historyEvents"
+import { useState,} from "react"
 
 const defaultPosition : [number, number] = [51.505, -0.09];
 
-const emptyStar = <i className="fa-regular fa-star"></i>;
+const emptyStar = <i className="fa-regular fa-star"></i>;  // icon tag from html
 const fullStar = <i className="fa-solid fa-star" style={{ color: "#fdc401"}}></i>
 // mapsapp
 const MapApplication = () => {
 
+  const [activeEvent, setActiveEvent] = useState<HistoricalEvents | null>(null)
+  const [favorites, setFavorites] = useState<number[]>(() => {
+    // initial data
+    const savedFavorites = localStorage.getItem("favorites");
+      return savedFavorites ? JSON.parse(savedFavorites) : []; //parse mean string to json otherwise empty array
+  });
+
+  console.log(favorites)
 
   const icon: Icon = new Icon({
     iconUrl: "marker.svg",
@@ -19,8 +27,19 @@ const MapApplication = () => {
     iconAnchor: [12, 35],
   })
 
-  const [favorites, setFavorites] = useState<HistoricalEvent[]>([]);
+  const handleFavorite = (eventId : number) => {
+    //return new array of favorite that doesnt include the current even Id (becoming unfavorite)
+    let updatedFavorites = favorites.filter((id) => id !== eventId); 
+          
+    // if eventId is not included in favorites (becoming favorite)
+    if (!favorites.includes(eventId)) {
+      updatedFavorites = [eventId, ...updatedFavorites];
+    }
+       
+    setFavorites(updatedFavorites);
+    localStorage.setItem("updatedFavorites", JSON.stringify(updatedFavorites));
 
+  }
 
   return (
     <div className="flex flex-col w-full h-full">
@@ -39,9 +58,10 @@ const MapApplication = () => {
                     <p>
                       {event.description}
                     </p>
-                    <button className="popup-inner__button">
+                    <button onClick={() => handleFavorite(event.id)} className="popup-inner__button">
                       <span>
-                        {emptyStar} Favorite
+                          {favorites.includes(event.id) ? fullStar : emptyStar}
+                          {favorites.includes(event.id) ? ' Unfavorite' : ' Favorite'}
                       </span>
                       </button>
                   </div>
