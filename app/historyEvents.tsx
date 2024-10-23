@@ -7,7 +7,7 @@ export type HistoricalEvents = {
     category: string;
   }
 
-  export const events: HistoricalEvents[] = [
+  export const historyEvents: HistoricalEvents[] = [
         {
           id: 1,
           title: "First Manned Moon Landing",

@@ -28,7 +28,10 @@ body {
 .content {
   width: 100%;
   height: 100%;
-  padding: 2rem;
+  padding: 1.4rem;
+
+  display: flex;
+  gap: 2rem;
 }
 
 .map-container {
@@ -36,5 +39,24 @@ body {
   height: 100%;
   position: relative;
   border-radius: var(--brad-4);
-  border: 2px solid var(--border-color-2)
+  border: 2px solid var(--border-color-2);
+
+}
+
+
+.liked-events {
+  flex: 1;
+  padding: 1rem 2rem;
+  background-color: var(--events--bg);
+  box-shadow: var(--box-shadow);
+  border: 2px solid var(--border-color-2);
+  border-radius: var(--brad-2);
+}
+
+
+.nav {
+  border: 2px solid var(--border-color-2);;
+  border-radius: var(--brad-1);
+  background-color: var(--events--bg);
+  color: var(--color-white)
 }
