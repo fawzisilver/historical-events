@@ -8,9 +8,11 @@
   --body-bg: #1e1e1e;
   --body--bg: #1e1e1e;
   --events--bg: #262626;
+  --eventsHover--bg: #7c7c7c;
   --border-color: #363636;
   --border-color-2: #454545;
   --color-white: #fff;
+  --color-beige: #ede8d0;
   --color--purple: #7263f3;
   --color--black: #000;
   --box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -51,6 +53,33 @@ body {
   box-shadow: var(--box-shadow);
   border: 2px solid var(--border-color-2);
   border-radius: var(--brad-2);
+  overflow-y: auto;
+  
+
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+
+  i{
+    color: rgb(156, 54, 54);
+  }
+
+  &__event {
+    padding: 0.2rem 1rem;
+    margin: 0.2rem 0.1rem;
+    color: var(--color-beige);
+    background-color: #454545;
+    border-radius: 0.25rem;
+    
+  }
+  
+  &__event:hover {
+    background-color: var(--eventsHover--bg);
+    
+  }
+  
 }
 
 
