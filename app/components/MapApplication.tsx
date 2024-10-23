@@ -3,8 +3,9 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 import 'leaflet/dist/leaflet.css'
 import { Icon } from 'leaflet'
 import { historyEvents, HistoricalEvents } from "../historyEvents"
-import { useState, useRef } from "react"
+import { useState, useRef, act } from "react"
 import { Map as Leaflet} from "leaflet"
+import FlyToMarker from "./FlyToMarker"
 
 const defaultPosition : [number, number] = [51.505, -0.09];
 
@@ -22,21 +23,15 @@ const MapApplication = () => {
 
   console.log(favorites)
 
-  // use ref
-  const mapRef = useRef<Leaflet | null>(null);
-  const markersRef = useRef<Map<number, L.Marker>>(new Map());
+
 
   const defaultIcon: Icon = new Icon({
     iconUrl: "marker.svg",
-    iconSize: [20, 15],
-    iconAnchor: [12, 5],
+    iconSize: [35, 25],
+    iconAnchor: [12, 15],
   })
 
-  const hoveredIcon: Icon = new Icon({
-    iconUrl: "map-marker-svgrepo-com.svg",
-    iconSize: [35, 30],
-    iconAnchor: [12, 25],
-  })
+
 
   const handleFavorite = (eventId : number) => {
     //return new array of favorite that doesnt include the current even Id (becoming unfavorite)
@@ -52,31 +47,15 @@ const MapApplication = () => {
 
   }
 
-  //========================================
-  const handleEventHoverFly = (eventPosition : [number, number]) => {
-    const map = mapRef.current;
+  const handleListItemClick = (eventId : number) => {
+    const event = historyEvents.find((history) => history.id === eventId);
 
-    if(map && eventPosition) {
-      map.flyTo(eventPosition, 12, { duration: 1.5 });
+    if(event) {
+      setActiveEvent(event);
     }
   }
 
-  const handleEventClick = (event : HistoricalEvents) => {
-    const marker = markersRef.current.get(event.id);
-    // console.log(`Hovered event: ${eventId}`, markerHover)
-    if (marker) {
-        marker.closePopup();
-
-        // fly to the marker's position
-        const map = mapRef.current;
-        if (map && event.position) {
-          map.flyTo(event.position, 12, { duration: 3});
-        }
-
-        setActiveEvent(event);
-        marker.openPopup();
-      }
-  }
+ 
 
  
   return (
@@ -107,16 +86,7 @@ const MapApplication = () => {
               className="liked-events__event" 
               key={event?.id} 
               onClick={()=> {
-                if(event) {
-                  handleEventClick(event)
-                }
-              }}
-              onMouseEnter={() => {
-                handleEventHoverFly(event.position)
-                setHoveredEvent(event.id)
-              }}
-              onMouseLeave={() => {
-                setHoveredEvent(null);
+                  handleListItemClick(event.id)
               }}
               >
               <h3 className="liked-events__eventTitle">{event?.title}</h3>
@@ -131,26 +101,25 @@ const MapApplication = () => {
 
     {/* Main Content - Map on the Right */}
     <div className={`${favorites.length > 0 ? 'w-4/5' : 'w-full'} h-full pl-4`}>
-      <MapContainer center={defaultPosition} zoom={13} className="map-container" ref={mapRef}>
+      <MapContainer center={defaultPosition} zoom={13} className="map-container">
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {historyEvents.map((event) => (
           <Marker
             key={event.id}
             position={event.position}
-            icon={hoveredEvent === event.id ? (hoveredIcon) : (defaultIcon)}
-            zIndexOffset={hoveredEvent === event.id ? 1000 : 0}
+            icon={defaultIcon}
             eventHandlers={{
               click: () => {
-                setActiveEvent(event);
+                setActiveEvent(event)
               }
             }}
-            ref={(marker) => {
-              if(marker) {
-                markersRef.current.set(event.id, marker)
-              }
-            }}
+           
           />
+
         ))}
+
+      {activeEvent && <FlyToMarker position={activeEvent?.position} zoomlvl={12} />}  
+
         {/* Active or Clicked Marker */}
         {activeEvent && activeEvent.position && Array.isArray(activeEvent.position) && (
           
