@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css'
 import { Icon } from 'leaflet'
 import { historyEvents, HistoricalEvents } from "../historyEvents"
 import { useState, useRef } from "react"
-import { Map as Leaflet } from "leaflet"
+import { Map as Leaflet} from "leaflet"
 
 const defaultPosition : [number, number] = [51.505, -0.09];
 
@@ -12,7 +12,7 @@ const emptyHeart = <i className="fa-regular fa-heart"></i>;  // icon tag from ht
 const fullHeart = <i className="fa-solid fa-heart" style={{ color: "rgb(156, 54, 54)"}}></i>
 // mapsapp
 const MapApplication = () => {
-
+  const [hoveredEvent, setHoveredEvent] = useState<number | null>(null);
   const [activeEvent, setActiveEvent] = useState<HistoricalEvents | null>(null)
   const [favorites, setFavorites] = useState<number[]>(() => {
     // initial data
@@ -22,12 +22,20 @@ const MapApplication = () => {
 
   console.log(favorites)
 
+  // use ref
   const mapRef = useRef<Leaflet | null>(null);
+  const markersRef = useRef<Map<number, L.Marker>>(new Map());
 
-  const icon: Icon = new Icon({
+  const defaultIcon: Icon = new Icon({
     iconUrl: "marker.svg",
-    iconSize: [25, 35],
-    iconAnchor: [12, 35],
+    iconSize: [20, 15],
+    iconAnchor: [12, 5],
+  })
+
+  const hoveredIcon: Icon = new Icon({
+    iconUrl: "map-marker-svgrepo-com.svg",
+    iconSize: [35, 30],
+    iconAnchor: [12, 25],
   })
 
   const handleFavorite = (eventId : number) => {
@@ -44,14 +52,33 @@ const MapApplication = () => {
 
   }
 
-  const handleEventHover = (eventPosition : [number, number]) => {
+  //========================================
+  const handleEventHoverFly = (eventPosition : [number, number]) => {
     const map = mapRef.current;
 
     if(map && eventPosition) {
-      map.flyTo(eventPosition, 15, { duration: 2.5 });
+      map.flyTo(eventPosition, 12, { duration: 1.5 });
     }
   }
 
+  const handleEventClick = (event : HistoricalEvents) => {
+    const marker = markersRef.current.get(event.id);
+    // console.log(`Hovered event: ${eventId}`, markerHover)
+    if (marker) {
+        marker.closePopup();
+
+        // fly to the marker's position
+        const map = mapRef.current;
+        if (map && event.position) {
+          map.flyTo(event.position, 12, { duration: 3});
+        }
+
+        setActiveEvent(event);
+        marker.openPopup();
+      }
+  }
+
+ 
   return (
     <div className="flex flex-col gap-5 w-full h-full">
   {/* Navigation Bar */}
@@ -76,7 +103,22 @@ const MapApplication = () => {
 
           .filter(event => event !== undefined) // event with values (as array)
           .map(event => (
-            <li className="liked-events__event" key={event?.id} onMouseEnter={() => handleEventHover(event!.position)}>
+            <li 
+              className="liked-events__event" 
+              key={event?.id} 
+              onClick={()=> {
+                if(event) {
+                  handleEventClick(event)
+                }
+              }}
+              onMouseEnter={() => {
+                handleEventHoverFly(event.position)
+                setHoveredEvent(event.id)
+              }}
+              onMouseLeave={() => {
+                setHoveredEvent(null);
+              }}
+              >
               <h3 className="liked-events__eventTitle">{event?.title}</h3>
             </li>
           ))
@@ -95,17 +137,24 @@ const MapApplication = () => {
           <Marker
             key={event.id}
             position={event.position}
-            icon={icon}
+            icon={hoveredEvent === event.id ? (hoveredIcon) : (defaultIcon)}
+            zIndexOffset={hoveredEvent === event.id ? 1000 : 0}
             eventHandlers={{
               click: () => {
                 setActiveEvent(event);
+              }
+            }}
+            ref={(marker) => {
+              if(marker) {
+                markersRef.current.set(event.id, marker)
               }
             }}
           />
         ))}
         {/* Active or Clicked Marker */}
         {activeEvent && activeEvent.position && Array.isArray(activeEvent.position) && (
-          <Popup position={activeEvent.position}>
+          
+          <Popup position={activeEvent.position} offset={[0, -1]} className="popup-style">
             <div className="popup-inner">
               <h2 className="popup-inner__title">{activeEvent.title}</h2>
               <hr style={{ borderColor: "rgb(111, 207, 151)", borderWidth: '1px', width: '40%' }} />
