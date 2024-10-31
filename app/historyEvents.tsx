@@ -5,6 +5,7 @@ export type HistoricalEvents = {
     description: string;
     position: [number, number];
     category: string;
+    image: string;
   }
 
   export const historyEvents: HistoricalEvents[] = [
@@ -14,6 +15,7 @@ export type HistoricalEvents = {
           description: "On July 20, 1969, Apollo 11 landed the first humans on the Moon. Neil Armstrong became the first person to walk on its surface, marking a major milestone in space exploration.",
           position: [0.6741, 23.4729], // Moon (Tranquility Base)
           category: "Science",
+          image: "Apollo11.avif"
         },
         {
           id: 2,
@@ -21,6 +23,7 @@ export type HistoricalEvents = {
           description: "In 1889, Vincent van Gogh painted Starry Night, a masterpiece that later became one of the most recognized works of post-impressionism.",
           position: [43.946, 5.7721],
           category: "Art",
+          image: "/starry_night_full.jpg",
         },
         {
           id: 3,
@@ -28,6 +31,7 @@ export type HistoricalEvents = {
           description: "The Battle of Waterloo took place on June 18, 1815, marking Napoleon Bonaparte's final defeat. This battle effectively ended the Napoleonic Wars.",
           position: [50.6807, 4.4124],
           category: "War",
+          image: "/waterloo.webp"
         },
         {
           id: 4,
@@ -35,48 +39,55 @@ export type HistoricalEvents = {
           description: "In 1876, Alexander Graham Bell patented the telephone, revolutionizing global communication. It laid the groundwork for modern telecommunications.",
           position: [42.3601, -71.0589],
           category: "Science",
+          image: "/alexander.jpg"
         },
         {
-          id: 5,
-          title: "Pele Wins First World Cup",
-          description: "In 1958, 17-year-old Pele led Brazil to its first FIFA World Cup victory. He became an international soccer legend and remains a symbol of Brazil's dominance in the sport.",
-          position: [-22.9068, -43.1729], // Rio de Janeiro, Brazil
-          category: "Sports",
-        },
-        {
-          id: 6,
-          title: "American Civil War Begins",
-          description: "The American Civil War began in 1861 following the secession of southern states from the Union. It became one of the deadliest conflicts in U.S. history.",
-          position: [32.7522, -79.8746],
-          category: "War",
-        },
-        {
-          id: 7,
-          title: "First Successful Human Heart Transplant",
-          description: "On December 3, 1967, Dr. Christiaan Barnard performed the first successful human heart transplant in South Africa. It marked a major advancement in medicine.",
-          position: [-33.9258, 18.4232],
-          category: "Science",
-        },
-        {
-          id: 8,
-          title: "Claude Monet Paints Water Lilies",
-          description: "Monet's Water Lilies series, created from 1899 to 1926, became one of the greatest achievements of Impressionist art. It inspired countless artists.",
-          position: [49.0833, 1.5333],
-          category: "Art",
-        },
-        {
-          id: 9,
-          title: "Nelson Mandela Released from Prison",
-          description: "On February 11, 1990, Nelson Mandela was released from prison after 27 years. His release signaled the beginning of the end of apartheid in South Africa.",
-          position: [-33.9249, 18.4241], // Cape Town, South Africa
-          category: "Politics",
-        },
+          "id": 5,
+          "title": "Pele Wins First World Cup",
+          "description": "In 1958, 17-year-old Pele led Brazil to its first FIFA World Cup victory. He became an international soccer legend and remains a symbol of Brazil's dominance in the sport.",
+          "position": [-22.9068, -43.1729],
+          "category": "Sports",
+          "image": "/Pele Wins First World Cup.jpg"
+      },
+      {
+        "id": 6,
+        "title": "American Civil War Begins",
+        "description": "The American Civil War began in 1861 following the secession of southern states from the Union. It became one of the deadliest conflicts in U.S. history.",
+        "position": [32.7522, -79.8746],
+        "category": "War",
+        "image": "/American Civil War Begins.jpg"
+      },
+      {
+        "id": 7,
+        "title": "First Successful Human Heart Transplant",
+        "description": "On December 3, 1967, Dr. Christiaan Barnard performed the first successful human heart transplant in South Africa. It marked a major advancement in medicine.",
+        "position": [-33.9258, 18.4232],
+        "category": "Science",
+        "image": "/First Successful Human Heart Transplant.jpg"
+      },
+      {
+        "id": 8,
+        "title": "Claude Monet Paints Water Lilies",
+        "description": "Monet's Water Lilies series, created from 1899 to 1926, became one of the greatest achievements of Impressionist art. It inspired countless artists.",
+        "position": [49.0833, 1.5333],
+        "category": "Art",
+        "image": "/Claude Monet Paints Water Lilies.jpg"
+     },
+      {
+        "id": 9,
+        "title": "Nelson Mandela Released from Prison",
+        "description": "On February 11, 1990, Nelson Mandela was released from prison after 27 years. His release signaled the beginning of the end of apartheid in South Africa.",
+        "position": [-33.9249, 18.4241],
+        "category": "Politics",
+        "image": "/Nelson Mandela Released from Prison.jpg"
+      },
         {
           id: 10,
           title: "First Vatican Council",
           description: "The First Vatican Council, held between 1869 and 1870, established papal infallibility as a doctrine of the Catholic Church. It marked a pivotal moment in the relationship between the church and modern states.",
           position: [41.9029, 12.4534], // Vatican City
           category: "Religion",
+          image: "/First Vatican Council.webp"
         },
         {
           id: 11,
@@ -84,6 +95,7 @@ export type HistoricalEvents = {
           description: "In 1953, James Watson and Francis Crick discovered the double-helix structure of DNA. This discovery paved the way for modern genetics.",
           position: [51.7592, -1.2623],
           category: "Science",
+          image: "/Discovery of DNA Structure by Watson and Crick.jpg"
         },
         {
           id: 12,
@@ -91,6 +103,7 @@ export type HistoricalEvents = {
           description: "The Battle of Stalingrad took place from 1942 to 1943, marking a major turning point in World War II. The Soviet victory dealt a significant blow to Nazi Germany.",
           position: [48.708, 44.5133],
           category: "War",
+          image: "/Battle of Stalingrad.jpg"
         },
         {
           id: 13,
@@ -98,6 +111,7 @@ export type HistoricalEvents = {
           description: "In 1687, Isaac Newton published his laws of motion in the 'Principia.' These laws became the foundation for classical mechanics.",
           position: [51.752, -1.2577],
           category: "Science",
+          image: "/Isaac Newton's Laws of Motion.png"
         },
         {
           id: 14,
@@ -105,6 +119,7 @@ export type HistoricalEvents = {
           description: "In 1974, Muhammad Ali defeated George Foreman in Kinshasa, Zaire, reclaiming the world heavyweight title. This victory solidified Ali's legacy as one of the greatest boxers in history.",
           position: [-4.4419, 15.2663], // Kinshasa, Democratic Republic of Congo
           category: "Sports",
+          image: "/Muhammad Ali Wins Rumble in the Jungle.jpg"
         },
         {
           id: 15,
@@ -112,6 +127,7 @@ export type HistoricalEvents = {
           description: "In 1642, Rembrandt painted The Night Watch, one of the most famous works from the Dutch Golden Age. It remains a masterpiece of Baroque art.",
           position: [52.3667, 4.8945],
           category: "Art",
+          image: "/Rembrandt Paints The Night Watch.webp"
         },
         {
           id: 16,
@@ -119,6 +135,7 @@ export type HistoricalEvents = {
           description: "In 1915, Albert Einstein published his theory of general relativity. It reshaped our understanding of space, time, and gravity.",
           position: [52.5163, 13.3777],
           category: "Science",
+          image: "/Albert Einstein Publishes the Theory of Relativity.avif"
         },
         {
           id: 17,
@@ -427,6 +444,7 @@ export type HistoricalEvents = {
             description: "On June 2, 1953, Queen Elizabeth II was crowned as the monarch of the United Kingdom in a televised ceremony. Her reign became the longest in British history.",
             position: [51.5014, -0.1419], // Westminster, London, UK
             category: "Politics",
+            image: "/The Coronation of Queen Elizabeth II.png"
           },
           {
             id: 61,
@@ -469,6 +487,7 @@ export type HistoricalEvents = {
             description: "In 1666, a fire broke out in a bakery on Pudding Lane in London and spread rapidly, destroying much of the city. It led to major rebuilding efforts, including the construction of St. Paul's Cathedral.",
             position: [51.5074, -0.1278], // London, England
             category: "Science",
+            image: "/original.avif"
           },
           {
             id: 67,
@@ -553,6 +572,7 @@ export type HistoricalEvents = {
             description: "In 1916, Irish nationalists launched the Easter Rising in an attempt to end British rule and establish an independent Ireland. The rebellion was suppressed, but it inspired future independence movements.",
             position: [53.3498, -6.2603], // Dublin, Ireland
             category: "Politics",
+            image: "/The 1916 Easter Rising.jpg"
           },
           {
             id: 79,
@@ -567,6 +587,7 @@ export type HistoricalEvents = {
             description: "The Renaissance, a cultural movement that began in Florence in the 14th century, saw a revival of interest in art, science, and philosophy. It marked the transition from the Middle Ages to the modern world.",
             position: [43.7696, 11.2558], // Florence, Italy
             category: "Art",
+            image: "/Nelson Mandela Released from Prison.jpg"
           },
           {
             id: 81,

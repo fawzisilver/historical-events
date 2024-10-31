@@ -22,7 +22,7 @@
     &__title {
         position: relative;
         font-size: 1.4rem;
-        color: rgb(111, 207, 151);
+        color: rgb(206, 214, 172);
         font-weight: 700;
         margin-bottom: 0.5rem;
 
@@ -39,9 +39,11 @@
     }
    
     &__description {
-        color: var(--color-white);
+        // color: var(--color-white);
+        color: rgb(206, 214, 172);
         font-weight: 300;
         font-size: 1rem;
+        letter-spacing: 0.025em;
     }
 
     &__button {

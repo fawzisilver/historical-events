@@ -23,41 +23,6 @@
   --brad-4: 2rem;
 }
 
-.dark-theme {
-  --body-bg: #1e1e1e !important;
-  --body--bg: #1e1e1e;
-  --events--bg: #262626;
-  --eventsHover--bg: #7c7c7c;
-  --border-color: #363636;
-  --border-color-2: #454545;
-  --color-white: #fff;
-  --color-beige: #ede8d0;
-  --color--purple: #7263f3;
-  --color--black: #000;
-  --box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  --brad-1: 0.5rem;
-  --brad-2: 1rem;
-  --brad-3: 1.5rem;
-  --brad-4: 2rem;
-}
-
-.light-theme {
-  --body-bg: white !important;
-  --body--bg: white;
-  --events--bg: #262626;
-  --eventsHover--bg: #7c7c7c;
-  --border-color: #363636;
-  --border-color-2: #454545;
-  --color-white: #fff;
-  --color-beige: #ede8d0;
-  --color--purple: #7263f3;
-  --color--black: #000;
-  --box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  --brad-1: 0.5rem;
-  --brad-2: 1rem;
-  --brad-3: 1.5rem;
-  --brad-4: 2rem;
-}
 
 
 
@@ -84,6 +49,11 @@ body {
 
 }
 
+
+.nav {
+  border-radius: var(--brad-3);
+  border: 2px solid var(--border-color-2);
+}
 
 .liked-events {
   flex: 1;

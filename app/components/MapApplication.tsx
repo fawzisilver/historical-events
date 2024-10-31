@@ -7,6 +7,7 @@ import { useState, useRef, act } from "react"
 import { Map as Leaflet} from "leaflet"
 import FlyToMarker from "./FlyToMarker"
 import Filter from "./Filter"
+import Image from "next/image"
 
 const defaultPosition : [number, number] = [51.505, -0.09];
 
@@ -14,7 +15,6 @@ const emptyHeart = <i className="fa-regular fa-heart"></i>;  // icon tag from ht
 const fullHeart = <i className="fa-solid fa-heart" style={{ color: "rgb(156, 54, 54)"}}></i>
 // mapsapp
 const MapApplication = () => {
-  const [hoveredEvent, setHoveredEvent] = useState<number | null>(null);
   const [activeEvent, setActiveEvent] = useState<HistoricalEvents | null>(null);
   const [favorites, setFavorites] = useState<number[]>(() => {
 // initial data
@@ -64,7 +64,7 @@ const MapApplication = () => {
   return (
     <div className="flex flex-col gap-5 w-full h-full">
   {/* Navigation Bar */}
-    <div className="nav h-[8%] flex items-center justify-start  ">
+    <div className="nav h-[8%] flex items-center justify-start border ">
       <Filter setSelectedCategory={setSelectedCategory} />
     </div>
 
@@ -129,8 +129,18 @@ const MapApplication = () => {
           <Popup position={activeEvent.position} offset={[0, -1]}>
             <div className="popup-inner">
               <h2 className="popup-inner__title">{activeEvent.title}</h2>
-              <hr style={{ borderColor: "rgb(111, 207, 151)", borderWidth: '1px', width: '40%' }} />
               <div className="popup-inner__description">
+                {activeEvent.image && (
+                  <Image
+                  src={activeEvent.image}
+                  alt={activeEvent.title}
+                  width={300}
+                  height={300}
+                  layout="responsive"
+                  style={{ borderRadius: "10px", marginBottom: "1rem", borderColor: "#454545"}}
+                />
+                )}
+                
                 <p>{activeEvent.description}</p>
                 <button onClick={() => handleFavorite(activeEvent.id)} className="popup-inner__button">
                   <span>
