@@ -28,7 +28,7 @@ const MapApplication = () => {
 
 
   const defaultIcon: Icon = new Icon({
-    iconUrl: "marker.svg",
+    iconUrl: "marker2.svg",
     iconSize: [35, 25],
     iconAnchor: [12, 15],
   })
@@ -137,7 +137,7 @@ const MapApplication = () => {
                   width={300}
                   height={300}
                   layout="responsive"
-                  style={{ borderRadius: "10px", marginBottom: "1rem", borderColor: "#454545"}}
+                  style={{ borderRadius: "10px", marginBottom: "1rem", borderColor: "#454545", borderBottom: "2px solid red"}}
                 />
                 )}
                 

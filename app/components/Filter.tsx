@@ -14,7 +14,7 @@ const Filter = ({ setSelectedCategory } : Props) => {
     <div className='filter'>
         <div className="filter__select">
             <select onChange={(e) => setSelectedCategory(e.target.value)}>
-                <option value="">Genres</option>
+                <option value="">All Genres</option>
                 {categories.map((category) => (
                     <option key={category}>{category}</option>
                 ))}
