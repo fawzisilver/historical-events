@@ -359,6 +359,7 @@ export type HistoricalEvents = {
             description: "In 1994, nearly 800,000 people, mostly Tutsi, were killed in a genocide carried out by the Hutu-led government in Rwanda. The event remains one of the darkest chapters in African history.",
             position: [-1.9441, 30.0619], // Kigali, Rwanda
             category: "War",
+            image: "/Rwandan Genocide.avif"
           },
           {
             id: 45,
@@ -366,6 +367,7 @@ export type HistoricalEvents = {
             description: "In 1920, the 19th Amendment to the U.S. Constitution was ratified, granting women the right to vote. This was a major victory for the women's suffrage movement.",
             position: [38.9072, -77.0369], // Washington, D.C., USA
             category: "Politics",
+            image: "/suffrage-protest.jpg"
           },
           {
             id: 46,
@@ -373,6 +375,7 @@ export type HistoricalEvents = {
             description: "The Colosseum in Rome, Italy, was completed around 80 CE. It became a symbol of Roman engineering and entertainment, hosting gladiatorial contests and public spectacles.",
             position: [41.8902, 12.4922], // Rome, Italy
             category: "Art",
+            image: "/Construction of the Colosseum.webp"
           },
           {
             id: 47,
@@ -380,6 +383,7 @@ export type HistoricalEvents = {
             description: "The European Union was formally established in 1993 with the signing of the Maastricht Treaty. It aimed to foster economic and political cooperation among its member states.",
             position: [50.8503, 4.3517], // Brussels, Belgium
             category: "Politics",
+            image: "/Formation of the European Union.webp"
           },
           {
             id: 48,
@@ -387,6 +391,7 @@ export type HistoricalEvents = {
             description: "In 1927, American baseball player Babe Ruth hit 60 home runs in a single season, setting a record that stood for decades. He remains one of the greatest athletes in the sport's history.",
             position: [40.7128, -74.0060], // New York, USA
             category: "Sports",
+            image: "/Babe Ruth's 60-Home Run Season.webp"
           },
           {
             id: 49,
@@ -394,6 +399,7 @@ export type HistoricalEvents = {
             description: "On December 17, 1903, Orville and Wilbur Wright achieved the first powered, controlled flight at Kitty Hawk, North Carolina. This marked the birth of modern aviation.",
             position: [36.1313, -75.7466], // Kitty Hawk, North Carolina, USA
             category: "Science",
+            image: "/The Wright Brothers' First Flight.webp"
           },
           {
             id: 50,
@@ -401,6 +407,7 @@ export type HistoricalEvents = {
             description: "The French Revolution began in 1789 with the storming of the Bastille. It led to the fall of the monarchy, the rise of Napoleon, and widespread political and social changes across Europe.",
             position: [48.8566, 2.3522], // Paris, France
             category: "Politics",
+            image: "/The French Revolution Begins.jpg"
           },
           {
             id: 51,
@@ -408,6 +415,7 @@ export type HistoricalEvents = {
             description: "In 1961, Soviet cosmonaut Yuri Gagarin became the first human to journey into outer space aboard Vostok 1. His mission marked a major milestone in the space race.",
             position: [55.7558, 37.6173], // Moscow, Russia
             category: "Science",
+            image: "/Yuri Gagarin Becomes the First Human in Space.jpg"
           },
           {
             id: 52,
@@ -415,6 +423,7 @@ export type HistoricalEvents = {
             description: "The 2004 Summer Olympics were held in Athens, Greece, marking a return to the birthplace of the ancient Olympic Games. It was the first time Greece hosted the Olympics since 1896.",
             position: [37.9838, 23.7275], // Athens, Greece
             category: "Sports",
+            image: "/The Olympics Return to Greece (2004).jpg"
           },
           {
             id: 53,
@@ -422,6 +431,7 @@ export type HistoricalEvents = {
             description: "In 44 BCE, Roman dictator Julius Caesar was assassinated by a group of senators, including Brutus and Cassius. His death led to the fall of the Roman Republic and the rise of the Roman Empire.",
             position: [41.9028, 12.4964], // Rome, Italy
             category: "Politics",
+            image: "/Assassination of Julius Caesar.jpg"
           },
           {
             id: 54,
@@ -429,6 +439,7 @@ export type HistoricalEvents = {
             description: "On January 1, 1863, U.S. President Abraham Lincoln issued the Emancipation Proclamation, freeing all slaves in Confederate-held territory. It was a turning point in the American Civil War.",
             position: [38.9072, -77.0369], // Washington, D.C., USA
             category: "Politics",
+            image: "/The Emancipation Proclamation.webp"
           },
           {
             id: 55,
@@ -436,6 +447,7 @@ export type HistoricalEvents = {
             description: "The Renaissance, a cultural movement that began in Italy in the 14th century, saw a revival of interest in art, science, and philosophy. It marked the transition from the Middle Ages to the modern world.",
             position: [43.7696, 11.2558], // Florence, Italy
             category: "Art",
+            image: "/The Renaissance Begins.webp"
           },
           {
             id: 56,
@@ -443,6 +455,7 @@ export type HistoricalEvents = {
             description: "In 1949, the North Atlantic Treaty Organization (NATO) was formed as a military alliance between the U.S., Canada, and several Western European nations. It was created in response to the growing threat of Soviet expansion.",
             position: [50.8503, 4.3517], // Brussels, Belgium
             category: "Politics",
+            image: "/Formation of NATO.jpg"
           },
           {
             id: 57,
@@ -450,6 +463,7 @@ export type HistoricalEvents = {
             description: "In 1478, the Spanish Inquisition was established to root out heresy within the Catholic Church. It became infamous for its brutal methods and persecution of Jews and Muslims.",
             position: [40.4168, -3.7038], // Madrid, Spain
             category: "Religion",
+            image: "/The Inquisition Begins.png"
           },
           {
             id: 58,
@@ -457,6 +471,7 @@ export type HistoricalEvents = {
             description: "On July 20, 1969, Neil Armstrong became the first human to walk on the Moon during NASA's Apollo 11 mission. His famous words 'That's one small step for man, one giant leap for mankind' remain iconic.",
             position: [0.6741, 23.4729], // Tranquility Base, Moon
             category: "Science",
+            image: "/Neil Armstrong's Walk on the Moon.jpg"
           },
           {
             id: 59,
@@ -464,6 +479,7 @@ export type HistoricalEvents = {
             description: "In 1453, the Ottoman Empire captured Constantinople, bringing an end to the Byzantine Empire. This event marked the rise of the Ottoman Empire as a major power in the Mediterranean.",
             position: [41.0082, 28.9784], // Istanbul, Turkey
             category: "War",
+            image: "/The Fall of Constantinople.jpg"
           },
           {
             id: 60,
@@ -479,6 +495,7 @@ export type HistoricalEvents = {
             description: "In 1945, the United Nations was founded in the aftermath of World War II to promote peace and cooperation among nations. It remains the largest international organization in the world.",
             position: [40.7128, -74.0060], // New York, USA
             category: "Politics",
+            image: "/Establishment of the United Nations.jpg"
           },
           {
             id: 62,
@@ -486,6 +503,7 @@ export type HistoricalEvents = {
             description: "In 1976, the Concorde supersonic jet made its first commercial flight, cutting travel time between Europe and the U.S. in half. It remained a symbol of luxury air travel until it was retired in 2003.",
             position: [48.8566, 2.3522], // Paris, France
             category: "Science",
+            image: "/The Concorde's First Commercial Flight.jpg"
           },
           {
             id: 63,
@@ -493,6 +511,7 @@ export type HistoricalEvents = {
             description: "The Black Death, a devastating plague, swept across Europe in the 14th century, killing an estimated 25 million people. It had profound social and economic impacts on medieval Europe.",
             position: [51.1657, 10.4515], // Europe (general region)
             category: "Science",
+            image: "/The Black Death.webp"
           },
           {
             id: 64,
@@ -500,6 +519,7 @@ export type HistoricalEvents = {
             description: "Completed in 1889 for the World's Fair, the Eiffel Tower became a symbol of Paris and France. Originally criticized, it is now one of the most visited landmarks in the world.",
             position: [48.8584, 2.2945], // Paris, France
             category: "Art",
+            image: "/The Construction of the Eiffel Tower.webp"
           },
           {
             id: 65,
@@ -507,6 +527,7 @@ export type HistoricalEvents = {
             description: "In 1948, the Soviet Union blocked access to West Berlin, prompting the Allies to launch the Berlin Airlift. Over the next year, planes delivered food and supplies to the city's residents.",
             position: [52.5200, 13.4050], // Berlin, Germany
             category: "War",
+            image: "/The Berlin Airlift.webp"
           },
           {
             id: 66,
@@ -514,7 +535,7 @@ export type HistoricalEvents = {
             description: "In 1666, a fire broke out in a bakery on Pudding Lane in London and spread rapidly, destroying much of the city. It led to major rebuilding efforts, including the construction of St. Paul's Cathedral.",
             position: [51.5074, -0.1278], // London, England
             category: "Science",
-            image: "/original.avif"
+            image: "/The Great Fire of London.jpg"
           },
           {
             id: 67,
@@ -522,6 +543,7 @@ export type HistoricalEvents = {
             description: "In 1588, the Spanish Armada, sent by King Philip II of Spain to invade England, was defeated by the English navy. This marked a turning point in naval warfare and England's rise as a global power.",
             position: [50.7680, -1.2077], // English Channel
             category: "War",
+            image: "/The Spanish Armada Defeated.jpg"
           },
           {
             id: 68,
@@ -529,6 +551,7 @@ export type HistoricalEvents = {
             description: "In 1930, Mahatma Gandhi led the Salt March, a nonviolent protest against British salt taxes in colonial India. The march became a symbol of resistance and played a key role in India's independence movement.",
             position: [22.5726, 88.3639], // Kolkata, India
             category: "Politics",
+            image: "/Mahatma Gandhi Leads the Salt March.jpg"
           },
           {
             id: 69,
@@ -536,6 +559,7 @@ export type HistoricalEvents = {
             description: "The War of 1812 was fought between the United States and Britain over issues like trade restrictions and territorial expansion. It ended in a stalemate but solidified U.S. sovereignty.",
             position: [38.9072, -77.0369], // Washington, D.C., USA
             category: "War",
+            image: "/The War of 1812.webp"
           },
           {
             id: 70,
@@ -543,6 +567,7 @@ export type HistoricalEvents = {
             description: "The Harlem Renaissance was a cultural movement in the 1920s that celebrated African-American culture through literature, music, and art. It helped shape the identity of African Americans in the 20th century.",
             position: [40.8116, -73.9465], // Harlem, New York, USA
             category: "Art",
+            image: "/The Harlem Renaissance.jpg"
           },
           {
             id: 71,
@@ -550,6 +575,7 @@ export type HistoricalEvents = {
             description: "On December 17, 1903, Orville and Wilbur Wright achieved the first powered, controlled flight at Kitty Hawk, North Carolina. This marked the birth of modern aviation.",
             position: [36.1313, -75.7466], // Kitty Hawk, North Carolina, USA
             category: "Science",
+            image: "/Wright Brothers' First Powered Flight.jpg"
           },
           {
             id: 72,
@@ -557,6 +583,7 @@ export type HistoricalEvents = {
             description: "On July 4, 1776, the American colonies declared their independence from Britain with the signing of the Declaration of Independence. This marked the birth of the United States.",
             position: [39.9526, -75.1652], // Philadelphia, Pennsylvania, USA
             category: "Politics",
+            image: "/The United States Declares Independence.webp"
           },
           {
             id: 73,
@@ -564,6 +591,7 @@ export type HistoricalEvents = {
             description: "In 1994, Nelson Mandela became South Africa's first Black president after decades of apartheid. His presidency marked the beginning of a new era of democracy in South Africa.",
             position: [-25.7461, 28.1881], // Pretoria, South Africa
             category: "Politics",
+            image: "/Nelson Mandela Becomes President of South Africa.jpg"
           },
           {
             id: 74,
@@ -571,6 +599,7 @@ export type HistoricalEvents = {
             description: "In the 1440s, Johannes Gutenberg invented the printing press, revolutionizing the spread of information. This invention is considered one of the most important in human history.",
             position: [49.9929, 8.2473], // Mainz, Germany
             category: "Science",
+            image: "/The Invention of the Printing Press.png"
           },
           {
             id: 75,
@@ -578,6 +607,7 @@ export type HistoricalEvents = {
             description: "In 1990, Nelson Mandela was released from prison after 27 years. His release marked the beginning of the end of apartheid in South Africa.",
             position: [-33.9249, 18.4241], // Cape Town, South Africa
             category: "Politics",
+            image: "/Nelson Mandela's Release from Prison.jpg"
           },
           {
             id: 76,
@@ -585,6 +615,7 @@ export type HistoricalEvents = {
             description: "From 1936 to 1939, the Spanish Civil War was fought between the Republicans and Nationalists. The war ended with the victory of Francisco Franco and the establishment of a fascist dictatorship.",
             position: [40.4168, -3.7038], // Madrid, Spain
             category: "War",
+            image: "/The Spanish Civil War.jpg"
           },
           {
             id: 77,
@@ -592,6 +623,7 @@ export type HistoricalEvents = {
             description: "In 1956, Egypt nationalized the Suez Canal, leading to a military intervention by Britain, France, and Israel. The crisis highlighted the decline of European colonial powers and the rise of Cold War tensions.",
             position: [30.0444, 31.2357], // Cairo, Egypt
             category: "Politics",
+            image: "/The Suez Crisis.jpg"
           },
           {
             id: 78,
@@ -607,6 +639,7 @@ export type HistoricalEvents = {
             description: "In 2002, the African Union (AU) was formed, replacing the Organization of African Unity (OAU). The AU promotes economic and political cooperation among African countries.",
             position: [9.0307, 38.7406], // Addis Ababa, Ethiopia
             category: "Politics",
+            image: "/The Formation of the African Union.png"
           },
           {
             id: 80,
@@ -614,7 +647,7 @@ export type HistoricalEvents = {
             description: "The Renaissance, a cultural movement that began in Florence in the 14th century, saw a revival of interest in art, science, and philosophy. It marked the transition from the Middle Ages to the modern world.",
             position: [43.7696, 11.2558], // Florence, Italy
             category: "Art",
-            image: "/Nelson Mandela Released from Prison.jpg"
+            image: "/The Renaissance Begins in Florence.jpg"
           },
           {
             id: 81,
@@ -622,6 +655,7 @@ export type HistoricalEvents = {
             description: "In 1922, British archaeologist Howard Carter discovered the tomb of Pharaoh Tutankhamun in Egypt. The tomb was filled with treasures and provided valuable insights into ancient Egyptian civilization.",
             position: [25.7344, 32.6014], // Valley of the Kings, Egypt
             category: "Science",
+            image: "/The Discovery of Tutankhamun's Tomb.jpg"
           },
           {
             id: 82,
@@ -629,6 +663,7 @@ export type HistoricalEvents = {
             description: "In 1948, the United Nations adopted the Universal Declaration of Human Rights, outlining the basic rights and freedoms to which all human beings are entitled.",
             position: [40.7128, -74.0060], // New York, USA
             category: "Politics",
+            image: "/The Declaration of Human Rights.jpg"
           },
           {
             id: 83,
@@ -636,6 +671,7 @@ export type HistoricalEvents = {
             description: "The Panama Canal was completed in 1914, connecting the Atlantic and Pacific Oceans. It revolutionized global trade and remains one of the most important engineering feats in history.",
             position: [9.1012, -79.4055], // Panama City, Panama
             category: "Science",
+            image: "/Construction of the Panama Canal.webp"
           },
           {
             id: 84,
@@ -643,6 +679,7 @@ export type HistoricalEvents = {
             description: "In 1970, NASA's Apollo 13 mission to the Moon suffered a critical failure. The crew survived thanks to the heroic efforts of the astronauts and ground control, making the mission a 'successful failure.'",
             position: [0.6741, 23.4729], // Space (Moon vicinity)
             category: "Science",
+            image: "/The Apollo 13 Mission.jpg"
           },
           {
             id: 85,
@@ -650,6 +687,7 @@ export type HistoricalEvents = {
             description: "In 1521, Spanish conquistador Hernán Cortés overthrew the Aztec Empire, capturing Tenochtitlan and marking the beginning of Spanish colonization in the Americas.",
             position: [19.4326, -99.1332], // Mexico City, Mexico (formerly Tenochtitlan)
             category: "War",
+            image: "/Hernán Cortés Conquers the Aztec Empire.avif"
           },
           {
             id: 86,
@@ -657,6 +695,7 @@ export type HistoricalEvents = {
             description: "In 1993, Nelson Mandela was awarded the Nobel Peace Prize for his role in dismantling apartheid and establishing multiracial democracy in South Africa.",
             position: [-25.7461, 28.1881], // Pretoria, South Africa
             category: "Politics",
+            image: "/Nelson Mandela Wins the Nobel Peace Prize.jpeg"
           },
           {
             id: 87,
@@ -664,6 +703,7 @@ export type HistoricalEvents = {
             description: "In 1948, the State of Israel was officially established following the end of the British Mandate in Palestine. The creation of Israel led to ongoing conflicts with Arab nations.",
             position: [31.7683, 35.2137], // Jerusalem, Israel
             category: "Politics",
+            image: "/The Creation of the State of Israel.jpg"
           },
           {
             id: 88,
@@ -671,6 +711,7 @@ export type HistoricalEvents = {
             description: "Though the exact time is unknown, early humans discovered how to control fire around 1.7 million years ago. This discovery revolutionized survival, cooking, and development.",
             position: [-1.2864, 36.8172], // Africa (general region)
             category: "Science",
+            image: "/The Discovery of Fire.webp"
           },
           {
             id: 89,
@@ -678,6 +719,7 @@ export type HistoricalEvents = {
             description: "In 1961, U.S. President John F. Kennedy delivered a speech calling for the United States to land a man on the Moon before the end of the decade. This speech inspired NASA's Apollo program.",
             position: [38.9072, -77.0369], // Washington, D.C., USA
             category: "Politics",
+            image: "/JFK's 'Man on the Moon' Speech.webp"
           },
           {
             id: 90,
@@ -685,6 +727,7 @@ export type HistoricalEvents = {
             description: "King Louis XIV of France, known as the 'Sun King,' reigned from 1643 to 1715. His rule centralized power in France and expanded French influence across Europe.",
             position: [48.8049, 2.1204], // Versailles, France
             category: "Politics",
+            image: "/The Reign of King Louis XIV.jpg"
           }
       
       
