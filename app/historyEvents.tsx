@@ -42,50 +42,50 @@ export type HistoricalEvents = {
           image: "/alexander.jpg"
         },
         {
-          "id": 5,
-          "title": "Pele Wins First World Cup",
-          "description": "In 1958, 17-year-old Pele led Brazil to its first FIFA World Cup victory. He became an international soccer legend and remains a symbol of Brazil's dominance in the sport.",
-          "position": [-22.9068, -43.1729],
-          "category": "Sports",
-          "image": "/Pele Wins First World Cup.jpg"
-      },
-      {
-        "id": 6,
-        "title": "American Civil War Begins",
-        "description": "The American Civil War began in 1861 following the secession of southern states from the Union. It became one of the deadliest conflicts in U.S. history.",
-        "position": [32.7522, -79.8746],
-        "category": "War",
-        "image": "/American Civil War Begins.jpg"
-      },
-      {
-        "id": 7,
-        "title": "First Successful Human Heart Transplant",
-        "description": "On December 3, 1967, Dr. Christiaan Barnard performed the first successful human heart transplant in South Africa. It marked a major advancement in medicine.",
-        "position": [-33.9258, 18.4232],
-        "category": "Science",
-        "image": "/First Successful Human Heart Transplant.jpg"
-      },
-      {
-        "id": 8,
-        "title": "Claude Monet Paints Water Lilies",
-        "description": "Monet's Water Lilies series, created from 1899 to 1926, became one of the greatest achievements of Impressionist art. It inspired countless artists.",
-        "position": [49.0833, 1.5333],
-        "category": "Art",
-        "image": "/Claude Monet Paints Water Lilies.jpg"
-     },
-      {
-        "id": 9,
-        "title": "Nelson Mandela Released from Prison",
-        "description": "On February 11, 1990, Nelson Mandela was released from prison after 27 years. His release signaled the beginning of the end of apartheid in South Africa.",
-        "position": [-33.9249, 18.4241],
-        "category": "Politics",
-        "image": "/Nelson Mandela Released from Prison.jpg"
-      },
+          id: 5,
+          title: "Pele Wins First World Cup",
+          description: "In 1958, 17-year-old Pele led Brazil to its first FIFA World Cup victory. He became an international soccer legend and remains a symbol of Brazil's dominance in the sport.",
+          position: [-22.9068, -43.1729],
+          category: "Sports",
+          image: "/Pele Wins First World Cup.jpg"
+        },
+        {
+          id: 6,
+          title: "American Civil War Begins",
+          description: "The American Civil War began in 1861 following the secession of southern states from the Union. It became one of the deadliest conflicts in U.S. history.",
+          position: [32.7522, -79.8746],
+          category: "War",
+          image: "/American Civil War Begins.jpg"
+        },
+        {
+          id: 7,
+          title: "First Successful Human Heart Transplant",
+          description: "On December 3, 1967, Dr. Christiaan Barnard performed the first successful human heart transplant in South Africa. It marked a major advancement in medicine.",
+          position: [-33.9258, 18.4232],
+          category: "Science",
+          image: "/First Successful Human Heart Transplant.jpg"
+        },
+        {
+          id: 8,
+          title: "Claude Monet Paints Water Lilies",
+          description: "Monet's Water Lilies series, created from 1899 to 1926, became one of the greatest achievements of Impressionist art. It inspired countless artists.",
+          position: [49.0833, 1.5333],
+          category: "Art",
+          image: "/Claude Monet Paints Water Lilies.jpg"
+        },
+        {
+          id: 9,
+          title: "Nelson Mandela Released from Prison",
+          description: "On February 11, 1990, Nelson Mandela was released from prison after 27 years. His release signaled the beginning of the end of apartheid in South Africa.",
+          position: [-33.9249, 18.4241],
+          category: "Politics",
+          image: "/Nelson Mandela Released from Prison.jpg"
+        },
         {
           id: 10,
           title: "First Vatican Council",
           description: "The First Vatican Council, held between 1869 and 1870, established papal infallibility as a doctrine of the Catholic Church. It marked a pivotal moment in the relationship between the church and modern states.",
-          position: [41.9029, 12.4534], // Vatican City
+          position: [41.9029, 12.4534],
           category: "Religion",
           image: "/First Vatican Council.webp"
         },
@@ -143,6 +143,7 @@ export type HistoricalEvents = {
           description: "The Second Vatican Council, held between 1962 and 1965, brought sweeping reforms to the Catholic Church. It modernized liturgy, improved relations with other religions, and addressed social issues.",
           position: [41.9029, 12.4534], // Vatican City
           category: "Religion",
+          image: "/Second Vatican Council.jpg"
         },
         {
           id: 18,
@@ -150,6 +151,7 @@ export type HistoricalEvents = {
           description: "On January 20, 2009, Barack Obama was inaugurated as the 44th President of the United States, becoming the country's first African-American president.",
           position: [38.9072, -77.0369], // Washington, D.C., USA
           category: "Politics",
+          image: "/Barack Obama Becomes U.S. President.jpg"
         },
         {
           id: 19,
@@ -157,6 +159,7 @@ export type HistoricalEvents = {
           description: "In 1931, Salvador Dalí painted The Persistence of Memory, a surrealist masterpiece known for its melting clocks. It became a symbol of modern art.",
           position: [41.379, 2.1699],
           category: "Art",
+          image: "/Salvador Dalí Paints The Persistence of Memory.jpg"
         },
         {
           id: 20,
@@ -164,6 +167,7 @@ export type HistoricalEvents = {
           description: "The Korean War broke out in 1950 when North Korea invaded South Korea. It drew in major powers like the United States and China.",
           position: [37.5665, 126.9780],
           category: "War",
+          image: "/The Korean War Begins.jpg"
         },
         {
           id: 21,
@@ -171,6 +175,7 @@ export type HistoricalEvents = {
           description: "In 1879, Thomas Edison invented the practical electric light bulb. It revolutionized daily life by providing a reliable source of light.",
           position: [40.7357, -74.1724],
           category: "Science",
+          image: "/Invention of the Light Bulb by Thomas Edison.webp"
         },
         {
           id: 22,
@@ -178,6 +183,7 @@ export type HistoricalEvents = {
           description: "Michelangelo completed the ceiling of the Sistine Chapel in Vatican City. His masterpiece became one of the most renowned works of art in history.",
           position: [41.9029, 12.4545],
           category: "Art",
+          image: "/Completion of the Sistine Chapel Ceiling.jpg"
         },
         {
           id: 23,
@@ -185,6 +191,7 @@ export type HistoricalEvents = {
           description: "In 1928, Alexander Fleming discovered penicillin, the first antibiotic. This breakthrough revolutionized medicine and saved countless lives by treating bacterial infections.",
           position: [51.5074, -0.1278],
           category: "Science",
+          image: "/Discovery of Penicillin.jpg"
         },
         {
           id: 24,
@@ -192,6 +199,7 @@ export type HistoricalEvents = {
           description: "Operation Desert Storm began in January 1991, as coalition forces led by the U.S. launched a military campaign to liberate Kuwait from Iraqi occupation.",
           position: [29.3759, 47.9774],
           category: "War",
+          image: "/Operation Desert Storm.jpg"
         },
         {
           id: 25,
@@ -199,6 +207,7 @@ export type HistoricalEvents = {
           description: "In the 1480s, Botticelli painted The Birth of Venus, which became a cornerstone of Renaissance art. It is celebrated for its beauty and symbolism.",
           position: [43.7687, 11.2569],
           category: "Art",
+          image: "/The Birth of Venus by Botticelli.avif"
         },
         {
           id: 26,
@@ -206,6 +215,7 @@ export type HistoricalEvents = {
           description: "On November 9, 1989, the Berlin Wall fell, symbolizing the end of the Cold War. This marked the beginning of Germany's reunification.",
           position: [52.5163, 13.3777],
           category: "Politics",
+          image: "/Fall of the Berlin Wall.jpg"
         },
         {
           id: 27,
@@ -213,6 +223,7 @@ export type HistoricalEvents = {
           description: "In 1989, Tim Berners-Lee invented the World Wide Web. This invention transformed how we communicate and access information globally.",
           position: [51.5074, -0.1278],
           category: "Science",
+          image: "/Invention of the World Wide Web by Tim Berners-Lee.webp"
         },
         {
           id: 28,
@@ -220,6 +231,7 @@ export type HistoricalEvents = {
           description: "The Spanish Civil War started in 1936, pitting Nationalists against Republicans. It was a precursor to the ideological battles of World War II.",
           position: [40.4168, -3.7038],
           category: "War",
+          image: "/The Spanish Civil War Begins.webp"
         },
         {
           id: 29,
@@ -227,6 +239,7 @@ export type HistoricalEvents = {
           description: "On October 4, 1957, the Soviet Union launched Sputnik 1, the first artificial satellite. It marked the beginning of the space age.",
           position: [55.7558, 37.6173],
           category: "Science",
+          image: "/First Artificial Satellite (Sputnik 1).jpg"
         },
         {
           id: 30,
@@ -234,6 +247,7 @@ export type HistoricalEvents = {
           description: "On October 16, 1978, Karol Wojtyła was elected Pope John Paul II, becoming the first non-Italian pope in 455 years. His papacy lasted for over 26 years, and he became one of the most influential religious leaders in history.",
           position: [41.9029, 12.4534], // Vatican City
           category: "Religion",
+          image: "/Pope John Paul II Becomes Pope.jpg"
         },
         {
             id: 31,
@@ -241,6 +255,7 @@ export type HistoricalEvents = {
             description: "The 1936 Olympics in Berlin became infamous for Adolf Hitler's attempts to promote Aryan supremacy. However, African-American athlete Jesse Owens won four gold medals, defying Nazi propaganda.",
             position: [52.5200, 13.4050],
             category: "Sports",
+            image: "/The 1936 Berlin Olympics.webp"
           },
           {
             id: 32,
@@ -248,6 +263,7 @@ export type HistoricalEvents = {
             description: "On August 15, 1947, India gained independence from British colonial rule. This marked the end of British Raj and led to the partition of India and Pakistan.",
             position: [28.6139, 77.2090], // New Delhi, India
             category: "Politics",
+            image: "/Independence of India.jpg"
           },
           {
             id: 33,
@@ -255,6 +271,7 @@ export type HistoricalEvents = {
             description: "In 1054, the Great Schism between the Roman Catholic Church and the Eastern Orthodox Church occurred. This division remains one of the most significant events in Christian history.",
             position: [41.9029, 12.4534], // Vatican City
             category: "Religion",
+            image: "/The Great Schism.jpg"
           },
           {
             id: 34,
@@ -262,6 +279,7 @@ export type HistoricalEvents = {
             description: "In 1994, the system of apartheid in South Africa was officially dismantled following the election of Nelson Mandela. It marked a new era of racial equality and democracy in the country.",
             position: [-25.7461, 28.1881], // Pretoria, South Africa
             category: "Politics",
+            image: "/The End of Apartheid.webp"
           },
           {
             id: 35,
@@ -269,6 +287,7 @@ export type HistoricalEvents = {
             description: "In 1930, the first-ever FIFA World Cup was held in Uruguay. The host nation emerged as the champions, defeating Argentina in the final.",
             position: [-34.9011, -56.1645], // Montevideo, Uruguay
             category: "Sports",
+            image: "/The First FIFA World Cup.jpg"
           },
           {
             id: 36,
@@ -276,6 +295,7 @@ export type HistoricalEvents = {
             description: "In 1215, King John of England signed the Magna Carta, a document that limited the power of the monarchy and laid the foundation for modern democracy.",
             position: [51.4975, -0.1357], // London, England
             category: "Politics",
+            image: "/Signing of the Magna Carta.webp"
           },
           {
             id: 37,
@@ -283,6 +303,7 @@ export type HistoricalEvents = {
             description: "In 1517, Martin Luther published his 95 Theses, criticizing the Catholic Church. This act sparked the Protestant Reformation, which led to the division of Christianity into Catholic and Protestant branches.",
             position: [51.1657, 10.4515], // Germany
             category: "Religion",
+            image: "/The Protestant Reformation.jpg"
           },
           {
             id: 38,
@@ -290,6 +311,7 @@ export type HistoricalEvents = {
             description: "In 1959, Fidel Castro and his revolutionary forces overthrew the Cuban government, establishing a communist regime. Castro would remain in power for nearly five decades.",
             position: [23.1136, -82.3666], // Havana, Cuba
             category: "Politics",
+            image: "/Fidel Castro Comes to Power.webp"
           },
           {
             id: 39,
@@ -297,6 +319,7 @@ export type HistoricalEvents = {
             description: "On November 22, 1963, U.S. President John F. Kennedy was assassinated while riding in a motorcade in Dallas, Texas. His death shocked the world and remains a topic of speculation.",
             position: [32.7767, -96.7970], // Dallas, Texas, USA
             category: "Politics",
+            image: "/John F. Kennedy Assassination.jpg"
           },
           {
             id: 40,
@@ -304,6 +327,7 @@ export type HistoricalEvents = {
             description: "In 1963, Valentina Tereshkova of the Soviet Union became the first woman to travel to space aboard Vostok 6. This marked a significant milestone in space exploration.",
             position: [55.7558, 37.6173], // Moscow, Russia
             category: "Science",
+            image: "/First Woman in Space Valentina Tereshkova.jpg"
           },
           {
             id: 41,
@@ -311,6 +335,7 @@ export type HistoricalEvents = {
             description: "Around 610 CE, the Prophet Muhammad received his first revelation from the Angel Gabriel in a cave near Mecca. This event is considered the beginning of Islam.",
             position: [21.4225, 39.8262], // Mecca, Saudi Arabia
             category: "Religion",
+            image: "/Muhammad's First Revelation.jpg"
           },
           {
             id: 42,
@@ -318,6 +343,7 @@ export type HistoricalEvents = {
             description: "In 1903, the first Tour de France bicycle race was held. It has since become one of the most famous and prestigious cycling events in the world.",
             position: [48.8566, 2.3522], // Paris, France
             category: "Sports",
+            image: "/The First Tour de France.webp"
           },
           {
             id: 43,
@@ -325,6 +351,7 @@ export type HistoricalEvents = {
             description: "The Cuban Missile Crisis of 1962 brought the world to the brink of nuclear war. It was a tense 13-day standoff between the U.S. and the Soviet Union over the presence of Soviet missiles in Cuba.",
             position: [23.1136, -82.3666], // Havana, Cuba
             category: "War",
+            image: "/The Cuban Missile Crisis.jpg"
           },
           {
             id: 44,
