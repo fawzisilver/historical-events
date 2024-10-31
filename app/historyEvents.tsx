@@ -6,17 +6,19 @@ export type HistoricalEvents = {
     position: [number, number];
     category: string;
     image: string;
+    funFact: string;
   }
 
   export const historyEvents: HistoricalEvents[] = [
-        {
-          id: 1,
-          title: "First Manned Moon Landing",
-          description: "On July 20, 1969, Apollo 11 landed the first humans on the Moon. Neil Armstrong became the first person to walk on its surface, marking a major milestone in space exploration.",
-          position: [0.6741, 23.4729], // Moon (Tranquility Base)
-          category: "Science",
-          image: "Apollo11.avif"
-        },
+    {
+      id: 1,
+      title: "First Manned Moon Landing",
+      description: "On July 20, 1969, Apollo 11 landed the first humans on the Moon. Neil Armstrong became the first person to walk on its surface, marking a major milestone in space exploration.",
+      position: [0.6741, 23.4729], // Moon (Tranquility Base)
+      category: "Science",
+      image: "Apollo11.avif",
+      funFact: "Neil Armstrong's famous words as he stepped onto the lunar surface were 'That's one small step for man, one giant leap for mankind.' Interestingly, the word 'a' in 'a man' was lost due to radio static, leading to one of history’s most famous misquotes."
+    },
         {
           id: 2,
           title: "Van Gogh Paints Starry Night",
@@ -535,7 +537,9 @@ export type HistoricalEvents = {
             description: "In 1666, a fire broke out in a bakery on Pudding Lane in London and spread rapidly, destroying much of the city. It led to major rebuilding efforts, including the construction of St. Paul's Cathedral.",
             position: [51.5074, -0.1278], // London, England
             category: "Science",
-            image: "/The Great Fire of London.jpg"
+            image: "/The Great Fire of London.jpg",
+           funFact: "The Great Fire of London in 1666 caused massive destruction but surprisingly few deaths—only six recorded.",
+
           },
           {
             id: 67,

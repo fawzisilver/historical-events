@@ -44,11 +44,57 @@
         font-weight: 300;
         font-size: 1rem;
         letter-spacing: 0.025em;
+
+        .image-wrapper {
+            position: relative;
+            display: inline-block;
+
+            img {
+                transition: transform 0.3s ease-in-out;
+                border-radius: 10px;
+                margin-bottom: 1rem;
+                border: 2px solid #454545;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            // Fun fact style
+            .fun-fact-tooltip {
+                display: none;
+                position: absolute;
+                top: 175%;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 0.5rem;
+                padding: 0.5rem 1rem;
+                background-color: rgba(0, 0, 0, 0.8);
+                color: var(--color-beige);
+                border-radius: var(--brad-4);
+                white-space: nowrap;
+                font-size: 0.85rem;
+                z-index: 10;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                font-weight: 600;
+                width: 34rem;
+
+                white-space: normal;
+                
+            }
+
+            &:hover .fun-fact-tooltip {
+                display: block;
+            }
+        }
+
+ 
+       
     }
 
     &__button {
         padding: 0.30rem 1.5rem;
-        background-color: rgb(7, 19, 8);
+        background-color: rgb(46, 44, 44);
         font-size: inherit;
         font-family: 600;
         color: rgb(111, 207, 151);
@@ -58,11 +104,15 @@
         margin: auto;
 
         &:hover {
-            // background-color: white;
+            background-color: rgb(102, 139, 104);
+            color: rgb(26, 32, 29);
+            font-weight: 600;
+            
         }
 
-        span {
-        }
+       
+        
     }
     
 }
+

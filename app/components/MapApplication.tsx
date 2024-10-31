@@ -131,16 +131,27 @@ const MapApplication = () => {
               <h2 className="popup-inner__title">{activeEvent.title}</h2>
               <div className="popup-inner__description">
                 {activeEvent.image && (
-                  <Image
-                  src={activeEvent.image}
-                  alt={activeEvent.title}
-                  width={300}
-                  height={300}
-                  layout="responsive"
-                  style={{ borderRadius: "10px", marginBottom: "1rem", borderColor: "#454545", borderBottom: "2px solid red"}}
-                />
+                  <div className="image-wrapper">
+                    <Image
+                    src={activeEvent.image}
+                    alt={activeEvent.title}
+                    width={300}
+                    height={300}
+                    layout="responsive"
+                    style={{ borderRadius: "10px", marginBottom: "1rem", borderColor: "#454545", borderBottom: "2px solid red"}}
+                  />
+                  {activeEvent.funFact && (
+                    <div className="fun-fact-tooltip">
+                      <div className="text-center">
+                    🧠  <span className="underline mb-2">Fun Fact! </span><br /> 
+
+                      </div>
+                     <span className="block mt-1">{activeEvent.funFact}</span>
+                    </div>
+                  )}
+                </div>
                 )}
-                
+                {/* Favorite button for Popup */}
                 <p>{activeEvent.description}</p>
                 <button onClick={() => handleFavorite(activeEvent.id)} className="popup-inner__button">
                   <span>
