@@ -1,5 +1,5 @@
 .leaflet-popup-content-wrapper {
-    background-color: var(--body--bg) !important;
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%) !important;
     color: var(--color-white) !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7) !important;
     border-radius: 20px !important;
@@ -62,6 +62,7 @@
 
             // Fun fact style
             .fun-fact-tooltip {
+                text-align: center;
                 display: none;
                 position: absolute;
                 top: 175%;
@@ -69,7 +70,8 @@
                 transform: translateX(-50%);
                 margin-top: 0.5rem;
                 padding: 0.5rem 1rem;
-                background-color: rgba(0, 0, 0, 0.8);
+                background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+                
                 color: var(--color-beige);
                 border-radius: var(--brad-4);
                 white-space: nowrap;
@@ -80,6 +82,17 @@
                 width: 34rem;
 
                 white-space: normal;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -10px; /* Positioning the arrow above the tooltip */
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-width: 10px;
+                    border-style: solid;
+                    border-color: transparent transparent var(--color-beige) transparent;
+                }
                 
             }
 

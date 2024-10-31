@@ -143,7 +143,7 @@ const MapApplication = () => {
                   {activeEvent.funFact && (
                     <div className="fun-fact-tooltip">
                       <div className="text-center">
-                    🧠  <span className="underline mb-2">Fun Fact! </span><br /> 
+                    🧠  <span className="underline leading-loose">Fun Fact! </span><br /> 
 
                       </div>
                      <span className="block mt-1">{activeEvent.funFact}</span>
