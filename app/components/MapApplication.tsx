@@ -3,8 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 import 'leaflet/dist/leaflet.css'
 import { Icon } from 'leaflet'
 import { historyEvents, HistoricalEvents } from "../historyEvents"
-import { useState, useRef, act } from "react"
-import { Map as Leaflet} from "leaflet"
+import { useState, useEffect } from "react"
 import FlyToMarker from "./FlyToMarker"
 import Filter from "./Filter"
 import Image from "next/image"
@@ -15,13 +14,25 @@ const emptyHeart = <i className="fa-regular fa-heart"></i>;  // icon tag from ht
 const fullHeart = <i className="fa-solid fa-heart" style={{ color: "rgb(156, 54, 54)"}}></i>
 // mapsapp
 const MapApplication = () => {
+  const [isClient, setIsClient] = useState(false);
   const [activeEvent, setActiveEvent] = useState<HistoricalEvents | null>(null);
-  const [favorites, setFavorites] = useState<number[]>(() => {
-// initial data
-      const savedFavorites = localStorage.getItem("favorites");
-      return savedFavorites ? JSON.parse(savedFavorites) : []; //parse mean string to json otherwise empty array
-  });
+  const [favorites, setFavorites] = useState<number[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, [])
+
+  // Wrap browser feature in useEffect
+  useEffect(() => {
+    if (typeof window !== "undefined") { // Ensure we're in the browser
+        const savedFavorites = localStorage.getItem("favorites");
+        if (savedFavorites) {
+            setFavorites(JSON.parse(savedFavorites));
+        }
+    }
+}, []);
+
 
   console.log('selected category :)', selectedCategory)
   console.log(favorites)
@@ -35,19 +46,19 @@ const MapApplication = () => {
 
 
 
-  const handleFavorite = (eventId : number) => {
-    //return new array of favorite that doesnt include the current even Id (becoming unfavorite)
-    let updatedFavorites = favorites.filter((id) => id !== eventId); 
-          
-    // if eventId is not included in favorites (becoming favorite)
-    if (!favorites.includes(eventId)) {
-      updatedFavorites = [eventId, ...updatedFavorites];
-    }
-       
-    setFavorites(updatedFavorites);
-    localStorage.setItem("updatedFavorites", JSON.stringify(updatedFavorites));
+  const handleFavorite = (eventId: number) => {
+    let updatedFavorites = favorites.filter((id) => id !== eventId);
 
-  }
+    if (!favorites.includes(eventId)) {
+        updatedFavorites = [eventId, ...updatedFavorites];
+    }
+
+    setFavorites(updatedFavorites);
+    
+    if (typeof window !== "undefined") { // Check for browser environment
+        localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    }
+};
 
 
   const handleListItemClick = (eventId : number) => {
@@ -62,6 +73,8 @@ const MapApplication = () => {
 
  
   return (
+    <>
+    {isClient && (
     <div className="flex flex-col gap-5 w-full h-full">
   {/* Navigation Bar */}
     <div className="nav h-[8%] flex items-center justify-start border ">
@@ -167,7 +180,8 @@ const MapApplication = () => {
     </div>
   </div>
 </div>
-
+)}
+</>
   );
 }
 

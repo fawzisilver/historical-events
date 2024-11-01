@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 
 type Props = {
     setSelectedCategory : React.Dispatch<React.SetStateAction<string | null>>; //update useState
